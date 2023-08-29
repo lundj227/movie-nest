@@ -1,1 +1,1 @@
-# group-project-1
+# Movie Search Application
