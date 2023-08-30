@@ -1,0 +1,100 @@
+:root{
+    --background-color: #1779ba;
+    --secondary-color: #fefefe;
+    --hover-color: rgba(254, 254, 254, 0.15);
+}
+/* header css */
+.subnav-hero-section {
+    text-align: center;
+    background: var(--background-color);
+    background-size: cover;
+    position: relative;
+    overflow: visible;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 300px;
+}
+  
+.subnav-hero-section .subnav-hero-headline {
+    color: var(--secondary-color);
+}
+  
+.subnav-hero-subnav {
+    float: none;
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    bottom: 0;
+    width: 100%;
+}
+  
+.subnav-hero-subnav li {
+    float: none;
+    display: inline-block;
+}
+  
+.subnav-hero-subnav li a {
+    padding: 0.9rem 1rem;
+    font-size: 0.75rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.35s ease-in-out;
+}
+  
+.subnav-hero-subnav li a.is-active {
+    background: var(--hover-color);
+}
+  
+.subnav-hero-subnav li a:hover {
+    background: var(--hover-color);
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; /* Adjust this value as needed */
+    width: 100vw;
+}
+/* Search Bar CSS */
+
+.input-group-rounded .input-group-field {
+    border-radius: 5000px 0 0 5000px;
+    padding-left: 1rem;
+}
+  
+.input-group-rounded .input-group-button .button {
+    border-radius: 0 5000px 5000px 0;
+    font-size: 0.8rem;
+}
+
+.input-group .input-group-rounded{ /* An attempt at trying to increase the width of the search bar didnt work */
+    width: 100%;
+}
+
+.search-bar {
+    margin-top: 20px; /* Adjust this value as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar .input-group-field {
+    width: 100%; /* Adjust the width as needed */
+}
+
+.search-bar .input-group-button .button {
+    width: 100%; /* Adjust the width as needed */
+}
+  
