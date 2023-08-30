@@ -88,6 +88,7 @@
 .input-group .input-group-rounded{ /* An attempt at trying to increase the width of the search bar didnt work */
     width: 100%;
 }
+
 #inputParent{
     width: 100%;
 }
