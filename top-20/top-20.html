@@ -21,25 +21,20 @@
   </head>
   <body>
     <header>
-      <nav class="top-bar topbar-responsive">
+      <nav class="top-bar topbar-responsive" data-topbar role="navigation">
         <div class="top-bar-title">
-          <span
-            data-responsive-toggle="topbar-responsive"
-            data-hide-for="medium"
-          >
-            <!-- <button class="menu-icon" style=color:#F41F4E; type="button" data-toggle></button> -->
+          <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
           </span>
-          <a class="topbar-responsive-logo" href="#"
-            ><strong>Movie Nest</strong></a
-          >
+          <a class="topbar-responsive-logo" href="#"><strong>Movie Nest</strong></a>
         </div>
         <div id="topbar-responsive" class="topbar-responsive-links">
           <div class="top-bar-right menu-list">
             <ul class="menu simple vertical medium-horizontal">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">My List</a></li>
-              <li><a href="#">History</a></li>
-              <li><a href="#">Snacks</a></li>
+              <li><a href="./home-page.html">Home</a></li>
+              <li><a href="./my-list.html">My List</a></li>
+              <li><a href="#">Bored ?</a></li>
+              <li><a href="./about-the-devs.html">About the Devs</a></li>
             </ul>
           </div>
         </div>
@@ -51,7 +46,14 @@
     <div id="card-grid" class="grid-x grid-padding-x grid-padding-y small-up-2 medium-up-2 large-up-4">
       <!-- Cards will be added here dynamically -->
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="./assets/script/top20.js"></script>
+    <!-- Include jQuery (before Foundation) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Include Foundation JavaScript (after jQuery) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+
+<!-- Your movie card script goes here -->
+<script src="./assets/script/top20.js"></script>
+
   </body>
 </html>

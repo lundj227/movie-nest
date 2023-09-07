@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
   function movieCard(){
 
     const apiKey = "eb4717d6311a7fd537d9d6bdfc76c132";
