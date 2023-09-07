@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Compressed CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css"
-        crossorigin="anonymous">
-
-    <!-- Compressed JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+    <script>
+      $(document).foundation();
+    </script>    
     <link rel="stylesheet" href="./assets/homepage/homepage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,22 +23,23 @@
         <div class="header-container">
             <h1 class="subnav-hero-headline">Movie Nest <small>by Group 3</small></h1>
             <div class="search-bar">
-                <div id= 'inputParent' class="input-group input-group-rounded">
-                    <input class="input-group-field" type="search" placeholder="Search Movies Here...">
+                <div id='inputParent' class="input-group input-group-rounded">
+                    <input class="input-group-field" type="search" placeholder="Search Movies Here..." id="searchInput">
                     <div class="input-group-button">
-                        <input type="submit" class="button secondary" value="Search">
+                        <input type="submit" class="button secondary" value="Search" id="searchButton">
                     </div>
                 </div>
             </div>
             <ul class="subnav-hero-subnav">
-                <li><a href="#">My List</a></li>
+                <li><a href="./my-list.html">My List</a></li>
                 <li><a href="#">Snacks</a></li>
-                <li><a href="#">Top 20</a></li>
-                <li><a href="#">About the Devs</a></li>
+                <li><a href="./top-20/top-20.html">Top 20</a></li>
+                <li><a href="./about-the-devs.html">About the Devs</a></li>
             </ul>
         </div>
-    </header>  
+    </header>
+    <div id="movieResults">
+    </div>
     <script src="./assets/homepage/homepage.js"></script>
 </body>
-
 </html>
