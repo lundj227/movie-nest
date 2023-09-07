@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Nest</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/top-20.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="top-bar topbar-responsive" data-topbar role="navigation">
+        <div class="top-bar-title">
+          <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
+            <button class="menu-icon" type="button" data-toggle></button>
+          </span>
+          <a class="topbar-responsive-logo" href="#"><strong>Movie Nest</strong></a>
+        </div>
+        <div id="topbar-responsive" class="topbar-responsive-links">
+          <div class="top-bar-right menu-list">
+            <ul class="menu simple vertical medium-horizontal">
+              <li><a href="./home-page.html">Home</a></li>
+              <li><a href="./my-list.html">My List</a></li>
+              <li><a href="#">Bored ?</a></li>
+              <li><a href="./about-the-devs.html">About the Devs</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="page-title">
+      <p>Top 20</p>
+    </div>
+    <div id="card-grid" class="grid-x grid-padding-x grid-padding-y small-up-2 medium-up-2 large-up-4">
+      <!-- Cards will be added here dynamically -->
+    </div>
+    <!-- Include jQuery (before Foundation) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Include Foundation JavaScript (after jQuery) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"></script>
+
+<!-- Your movie card script goes here -->
+<script src="./assets/script/top20.js"></script>
+
+  </body>
+</html>
