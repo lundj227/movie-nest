@@ -21,22 +21,17 @@
   </head>
   <body>
     <header>
-      <nav class="top-bar topbar-responsive" data-topbar role="navigation">
-        <div class="top-bar-title">
-          <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
-            <button class="menu-icon" type="button" data-toggle></button>
-          </span>
-          <a class="topbar-responsive-logo" href="../home-page.html"><strong>Movie Nest</strong></a>
-        </div>
-        <div id="topbar-responsive" class="topbar-responsive-links">
-          <div class="top-bar-right menu-list">
-            <ul class="menu simple vertical medium-horizontal">
-              <li><a href="../home-page.html">Home</a></li>
-              <li><a href="../assets/mylist/my-list.html">My List</a></li>
-              <li><a href="../food-assets/foodpage.html">Bored ?</a></li>
-              <li><a href="../assets/about-the-devs/about-the-devs.html">About the Devs</a></li>
-            </ul>
-          </div>
+      <nav class="navbar">
+        <a href="#" class="navbar-brand"><img id='ham-icon' src="../assets/about-the-devs/images/ham-icon.png" alt=""></a>
+        <div id="nav-links">
+          <ul class="navbar-nav">
+            <li><a href=""></a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../assets/mylist/my-list.html">My List</a></li>
+            <li><a href="../food-assets/ActGen.html">Bored ?</a></li>
+            <li><a href="../top-20/top-20.html">Top 20</a></li>
+            <li><a href="../assets/about-the-devs/about-the-devs.html">About the Devs</a></li>
+          </ul>
         </div>
       </nav>
     </header>
@@ -46,6 +41,17 @@
     <div id="card-grid" class="grid-x grid-padding-x grid-padding-y small-up-2 medium-up-2 large-up-4">
       <!-- Cards will be added here dynamically -->
     </div>
+    <footer>
+      <div class="footer-content">
+        <h3>Top 20</h3>
+        <p>Your top 20 favorate movies!</p>
+      </div>
+      <div>
+        <div class="footer-bottom">
+          <p>copyright &copy;2023 Movie Nest. designed by <span>Victor Jack Martin Sefufim Hugo</span>.</p>
+        </div>
+      </div>
+    </footer>
     <!-- Include jQuery (before Foundation) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
@@ -54,6 +60,6 @@
 
 <!-- Your movie card script goes here -->
 <script src="./assets/script/top20.js"></script>
-
+<script src="./assets/script/ham.js"></script>
   </body>
 </html>
