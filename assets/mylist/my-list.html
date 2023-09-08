@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +8,34 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css"
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="./mylist.css">
 </head>
+
 <body>
-  <nav class="top-bar topbar-responsive">
-    <div class="top-bar-title">
-      <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
-        <button class="menu-icon" type="button" data-toggle></button>
-      </span>
-      <a class="topbar-responsive-logo" href="#"><strong>MovieNest</strong></a>
-    </div>
-    <div id="topbar-responsive" class="topbar-responsive-links">
-      <div class="top-bar-right">
-        <ul class="menu simple vertical medium-horizontal">
-          <li><a href="../../home-page.html">Home</a></li>
-          <li><a href="./my-list.html">My List</a></li>
-          <li><a href="../../top-20/top-20.html">Top 20</a></li>
-          <li><a href="../../food-assets/foodpage.html">Bored ?</a></li>
-          <li>
-            <input type="text" id="searchInput" placeholder="Search for movies...">
-          </li>
-        </ul>
-      </div>
+  <nav class="navbar">
+    <a href="#" class="navbar-brand"><img id='ham-icon' src="../about-the-devs/images/ham-icon.png" alt=""></a>
+    <div id="nav-links">
+      <ul class="navbar-nav">
+        <li><a href=""></a></li>
+        <li><a href="../../home-page.html">Home</a></li>
+        <li><a href="../mylist/my-list.html">My List</a></li>
+        <li><a href="../../food-assets/foodpage.html">Bored ?</a></li>
+        <li><a href="../../top-20/top-20.html">Top 20</a></li>
+        <li><a href="../about-the-devs/about-the-devs.html">About the Devs</a></li>
+      </ul>
     </div>
   </nav>
+
   <body>
     <div id="favoriteMoviesContainer">
-        <!-- Favorited movies will be displayed here -->
+      <!-- Favorited movies will be displayed here -->
     </div>
-</body>
+  </body>
   <div id="movieModal" class="reveal" data-reveal></div>
   <script src=".mylist.js"></script>
+  <script src="ham.js"></script>
 </body>
+
 </html>
