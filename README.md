@@ -1,3 +1,5 @@
+
+=======
 # Movie Search Application
 ## User Story:
 * As a movie enthusiast,
@@ -30,3 +32,4 @@
 ## The Application
 [Click Here to View the Live Page!](https://lundj227.github.io/group-project-1)
 ![alt text](./assets/images/homepage-ss.png)
+
