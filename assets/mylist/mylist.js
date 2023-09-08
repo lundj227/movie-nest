@@ -1,4 +1,3 @@
-// my-list.js
 const API_BASE_URL = 'https://api.themoviedb.org/3';
 const API_KEY = '52c4202be8f44cf677f9d30d911e391b';
 
