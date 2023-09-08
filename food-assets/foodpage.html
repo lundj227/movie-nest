@@ -11,149 +11,48 @@
       href="https://cdn.jsdelivr.net/npm/foundation-sites@6.8.1/dist/css/foundation.min.css"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="foodpage.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   
-  <title>Snack Recommendations</title>
+  <title>Activity Generator</title>
 </head>
 <body>
-  <nav>
-    <input type="checkbox" id="check">
-    <label for="check" class="checkbtn">
-      <i class="fas fa-bars" id="toggle"></i></label>
-    </label>
-    <label class="logo">Snack Recommendations</label>
-    <ul id="navbar">
-      <li><a class="active" href="home-page.html">Home Page</a></li>
-      <li><a href="about-the-devs.html">About</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Feedback</a></li>
-    </ul>
-  </nav>
-  <section class="hero" id="hero">
-    <div class="container">
-      <div class="hero-content">
-        <p class="her-subtitle">The Best Recommended</p>
-
-        <h2 class="h1 hero-title">Snacks!</h2>
-
-        <p class="hero-text"></p>
-
-        <button class="btn" href="https://www.grubhub.com/?utm_source=google&utm_medium=cpc&utm_campaign=p:G+%7C+a:DINE+%7C+b:B+%7C+c:GRUB+%7C+d:NA+%7C+m:E+%7C+g:NAT+%7C+t:ALL+%7C+exp:&utm_term=grubhub&utm_content=acct_id-3329632822:camp_id-176536577:adgroup_id-12454658777:kwd-4961869853:creative_id-655901250142:ext_id-:matchtype_id-e:network-g:device-c:loc_interest-:loc_physical-9032941&gclid=Cj0KCQjw9MCnBhCYARIsAB1WQVVF5ZQCv-0ZQM8wp2QFXNUXMnKj6mRCHOD28H9bkumq7y4secesNhEaAr7tEALw_wcB&gclsrc=aw.ds">Grubhub</button>
-
-      </div>
-    </div>
-    <div id="card-grid" class="grid-x grid-padding-x grid-padding-y small-up-2 medium-up-2 large-up-4">
-      <!-- Cards will be added here dynamically -->
-    </div>
-  </section>
-  <footer class="footer">
-
-    <div class="foot-container">
-      <div class="footer-brand">
-        <a href="#" class="lo">Snacks<span class="span">.</span></a>
-        <p class="footer-text">
-          Financial experts support or help you to find out which way you can raise your funds more.
-        </p>
-        <ul class="social-list">
-          <li>
-            <a href="./images/5282541_fb_social media_facebook_facebook logo_social network_icon.png" class="social-li"></a>
-            <ion-icon name="logo-facebook"></ion-icon>
-          </li>
-
-          <li>
-            <a href="./images/5282544_camera_instagram_social media_social network_instagram logo_icon.png" class="social-li"></a>
-            <ion-icon name="logo-facebook"></ion-icon>
-          </li>
-
-          <li>
-            <a href="./images/5282551_tweet_twitter_twitter logo_icon.png" class="social-li"></a>
-            <ion-icon name="logo-facebook"></ion-icon>
-          </li>
-
-          <li>
-            <a href="./images/5282548_play_player_video_youtube_youtuble logo_icon.png" class="social-li"></a>
-            <ion-icon name="logo-facebook"></ion-icon>
-          </li>
-
+  <nav class="navbar">
+    <a href="#" class="navbar-brand"><img id = 'ham-icon' src="./assets/about-the-devs/images/ham-icon.png" alt=""></a>
+    <div id="nav-links">
+        <ul class="navbar-nav">
+            <li><a href=""></a></li>
+            <li><a href="./home-page.html">Home</a></li>
+            <li><a href="./my-list.html">My List</a></li>
+            <li><a href="./food-assets/foodpage.html">Snacks</a></li>
+            <li><a href="./top-20/top-20.html">Top 20</a></li>
+            <li><a href="./about-the-devs.html">About the Devs</a></li>
         </ul>
-
-      </div>
-
-      <ul class="footer-li">
-        <li>
-          <p class="footer-list-title">Contact Info</p>
-        </li>
-        <li>
-          <p class="foorer-list-item">+1 (503) 555-5555</p>
-        </li>
-        <li>
-          <p class="foorer-list-item">Email@gmail.com</p>
-        </li>
-        <li>
-          <address class="foorer-list-item">7445 SE 72nd Ave Portland, OR 97206</address>
-        </li>
-      </ul>
-
-      <ul class="footer-li">
-        <li>
-          <p class="footer-list-title">Open Hours</p>
-        </li>
-        <li>
-          <p class="foorer-list-item">Monday-Friday: 08:00-22:00</p>
-        </li>
-        <li>
-          <p class="foorer-list-item">Tuesday 4pm: Till Mid Night</p>
-        </li>
-        <li>
-          <p class="foorer-list-item">Saturday: 10:00-16:00</p>
-        </li>
-      </ul>
-
-      <form action="" class="footer-form">
-
-        <p class="footer-list-title">Book A Table</p>
-
-        <div class="input-wrap">
-          <input type="text" name="full_name" required placeholder="Your Name" 
-          aria-label="Your Name" class="input-fi">
-
-          <input type="email" name="emai_address" required placeholder="Email" 
-          aria-label="Email" class="input-fi">
-
-        </div>
-
-        <div class="input-wrapper">
-          <select name="total_person" aria-label="Total person" class="input-field">
-            <option value="person">Person</option>
-            <option value="2 person">2 Person</option>
-            <option value="3 person">3 Person</option>
-            <option value="4 person">4 Person</option>
-            <option value="5 person">5 Person</option>
-          </select>
-
-          <input type="date" name="booking_date" aria-label="Reservation date" required
-          class="input-field">
-        </div>
-
-        <textarea name="message" placeholder="Message" arai-label="Message"
-        class="input-field"></textarea>
-
-        <button type="submit" class="btn">Book A Table</button>
-
-      </form>
-
     </div>
-
-    <div class="footer-bottom">
-      <div class="foor-conta">
-        <p class="copyright-text">
-          &copy; 2023 <a href="#" class="copyright-link">Victor, Jack, Hugo, Martin, Sefufim</a> All Rights Reserved.
-        </p>
+</nav>
+  <section class="hero" id="hero">
+  </section>
+  <footer>
+    <div class="footer-content">
+      <h3>Activity Generator</h3>
+      <p>Activities like this is why we never go outside anymore.</p>
+      <ul class="socials">
+        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="#"><i class="fa fa-google"></i></a></li>
+        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-bottom">
+        <p>copyright &copy;2023 "Application Name". designed by <span>Victor Jack Martin Sefufim Hugo</span>.</p>
       </div>
     </div>
-
   </footer>
   <script src="./foodpage.JS"></script>
 </body>
