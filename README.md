@@ -1,6 +1,11 @@
-
-=======
 # Movie Search Application
+
+The Movie Search App is a user-friendly web application that allows movie enthusiasts to search for movies, view their details, and save their favorite movies. It provides an easy way to discover new movies and keep track of movie preferences. In addition to these features, the app also offers the following:
+
+- **Top 20 Movies**: View a curated list of the top 20 movies of all time.
+- **Bored Feature**: When you're feeling bored and need something fun to do, the Bored Feature can generate random activities to keep you entertained.
+
+
 ## User Story:
 * As a movie enthusiast,
 * I want to search for movies, view their details, and save my favorite movies
@@ -25,7 +30,27 @@
 * When I access it from mobile devices or tablets,
 * Then the app's interface should adapt and provide a seamless experience on various screen sizes.
 
-## API's Used
+## How to Use
+
+1. Open the Movie Search App in your web browser.
+
+2. Use the search bar on the home page to search for movies by title or genre.
+
+3. Browse the search results and click on a movie card to view its details.
+
+4. To mark a movie as a favorite, click the "Favorite" button on the movie card. The app will store your favorites locally.
+
+5. To view your favorite movies, navigate to the "My List" section of the app. Here, you can see your list of favorite movies.
+
+6. To explore the top 20 movies of all time, go to the "Top 20 Movies" section. You'll find a curated list of the top 20 movies.
+
+7. If you're feeling bored and need an activity, visit the "Bored Feature" page. The app will generate a random activity for you to enjoy.
+
+## Technologies Used
+
+* HTML
+* CSS 
+* JavaScript
 * [Bored API](https://www.boredapi.com/): Random Activity Database
 * [TMDb API](https://developer.themoviedb.org/reference/intro/getting-started): Movie Database
 
