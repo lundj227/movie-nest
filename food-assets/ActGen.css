@@ -63,7 +63,7 @@ body {
 }
 
 .navbar-nav a:hover{
-    color: black;
+    color: rgb(255, 83, 83);
 }
 @media screen and (max-width: 868px) {
     #nav-links{
@@ -147,32 +147,6 @@ footer  {
     font-size: 14px;
 }
 
-.socials {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0 3rem 0;
-}
-
-socials li {
-    margin: 0 10px;
-}
-
-.socials a {
-    text-decoration: none;
-    color: white;
-}
-
-.socials a i {
-    font-size: 1.1rem;
-    transition: color .4s ease;
-}
-
-.socials a:hover i {
-    color: aqua;
-}
-
 .footer-bottom {
     background-color: black;
     width: 100vw;
@@ -191,81 +165,3 @@ socials li {
     opacity: .4;
     font-size: 200;
 }
-
-
-
-/* 
-      <ul class="footer-li">
-        <li>
-          <p class="footer-list-title">Contact Info</p>
-        </li>
-        <li>
-          <p class="foorer-list-item">+1 (503) 555-5555</p>
-        </li>
-        <li>
-          <p class="foorer-list-item">Email@gmail.com</p>
-        </li>
-        <li>
-          <address class="foorer-list-item">7445 SE 72nd Ave Portland, OR 97206</address>
-        </li>
-      </ul>
-
-      <ul class="footer-li">
-        <li>
-          <p class="footer-list-title">Open Hours</p>
-        </li>
-        <li>
-          <p class="foorer-list-item">Monday-Friday: 08:00-22:00</p>
-        </li>
-        <li>
-          <p class="foorer-list-item">Tuesday 4pm: Till Mid Night</p>
-        </li>
-        <li>
-          <p class="foorer-list-item">Saturday: 10:00-16:00</p>
-        </li>
-      </ul>
-
-      <form action="" class="footer-form">
-
-        <p class="footer-list-title">Book A Table</p>
-
-        <div class="input-wrap">
-          <input type="text" name="full_name" required placeholder="Your Name" 
-          aria-label="Your Name" class="input-fi">
-
-          <input type="email" name="emai_address" required placeholder="Email" 
-          aria-label="Email" class="input-fi">
-
-        </div>
-
-        <div class="input-wrapper">
-          <select name="total_person" aria-label="Total person" class="input-field">
-            <option value="person">Person</option>
-            <option value="2 person">2 Person</option>
-            <option value="3 person">3 Person</option>
-            <option value="4 person">4 Person</option>
-            <option value="5 person">5 Person</option>
-          </select>
-
-          <input type="date" name="booking_date" aria-label="Reservation date" required
-          class="input-field">
-        </div>
-
-        <textarea name="message" placeholder="Message" arai-label="Message"
-        class="input-field"></textarea>
-
-        <button type="submit" class="btn">Book A Table</button>
-
-      </form>
-
-    </div>
-
-    <div class="footer-bottom">
-      <div class="foor-conta">
-        <p class="copyright-text">
-          &copy; 2023 <a href="#" class="copyright-link">Victor, Jack, Hugo, Martin, Sefufim</a> All Rights Reserved.
-        </p>
-      </div>
-    </div>
-*/
-
