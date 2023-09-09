@@ -137,6 +137,20 @@
     transition: color 0.3s ease-in;
   }
 
+  .favorite-button {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: var(--secondary-color);
+    width: 160px;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
 /*--------- */
 /*#Footer */
 /*--------- */
