@@ -20,6 +20,11 @@ header {
   padding: 10px 0;
 }
 
+h1{
+  text-align: center;
+  color: var(--secondary-color);
+  
+}
 
 .topbar-responsive {
   background: #2c3840;
