@@ -80,7 +80,7 @@ $(document).ready(function () {
   function activity(card) {
     $.ajax({
       type: "GET",
-      url: "http://www.boredapi.com/api/activity/",
+      url: "https://www.boredapi.com/api/activity/",
       imageUrl: "#",
       dataType: "json",
     }).then((data) => {
@@ -114,7 +114,7 @@ $(document).ready(function () {
 
   $.ajax({
     type: "GET",
-    url: "http://www.boredapi.com/api/activity/",
+    url: "https://www.boredapi.com/api/activity/",
     imageUrl: "#",
     dataType: "json",
   }).then((data) => {
