@@ -67,6 +67,14 @@ h1{
 .topbar-responsive .menu a:hover {
   color:  #F41F4E;
 }
+.card{
+  width: 85%;
+}
+.button-container{
+  display: block;
+  margin: 0 auto;
+  padding: 2px;
+}
 
 @media screen and (max-width: 39.9375em) {
   .topbar-responsive .menu a {
