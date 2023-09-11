@@ -41,14 +41,43 @@ async function fetchFavoriteMovies() {
       movieDescription.classList.add('movie-description');
       movieDescription.textContent = movieDetails.overview; // Display movie description
 
-      // Append title, poster, and description elements to the movie container
-      movieContainer.appendChild(movieTitle);
-      movieContainer.appendChild(moviePoster);
-      movieContainer.appendChild(movieDescription);
+       // Create an "Unfavorite" button
+       const unfavoriteButton = document.createElement('button');
+       unfavoriteButton.classList.add('unfavorite-button');
+       unfavoriteButton.textContent = 'Unfavorite';
+ 
+       // Add an event listener to the "Unfavorite" button
+       unfavoriteButton.addEventListener('click', () => {
+         unfavoriteMovie(movieId);
+         // Remove the movie container from the DOM
+         movieContainer.remove();
+       });
+ 
+       // Append title, poster, description, and "Unfavorite" button elements to the movie container
+       movieContainer.appendChild(movieTitle);
+       movieContainer.appendChild(moviePoster);
+       movieContainer.appendChild(movieDescription);
+       movieContainer.appendChild(unfavoriteButton);
+ 
+       // Append the movie container to the favoriteMoviesContainer
+       favoriteMoviesContainer.appendChild(movieContainer);
+     }
+   }
+ }
 
-      // Append the movie container to the favoriteMoviesContainer
-      favoriteMoviesContainer.appendChild(movieContainer);
-    }
+// Function to remove a movie from favorites and update the display
+function unfavoriteMovie(movieId) {
+  // Get the current list of favorite movies from localStorage
+  let favoriteMovies = JSON.parse(localStorage.getItem('favoriteMovies')) || [];
+
+  // Check if the movie is in the favorites list
+  const movieIndex = favoriteMovies.indexOf(movieId);
+  if (movieIndex !== -1) {
+    // If it's in the list, remove it
+    favoriteMovies.splice(movieIndex, 1);
+
+    // Update the favorite movies in localStorage
+    localStorage.setItem('favoriteMovies', JSON.stringify(favoriteMovies));
   }
 }
 
