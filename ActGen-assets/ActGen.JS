@@ -84,12 +84,10 @@ $(document).ready(function () {
         dataType: "json",
       }).then((data) => {
         console.log(data);
-       
         updateCard(card, data);
       });
     }
   
-   
     function updateCard(card, data) {
       card.find(".card-divider").text(data.activity);
       card.find(".participants").text("Number of Participants: " + data.participants);
