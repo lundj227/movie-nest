@@ -10,25 +10,28 @@ async function searchMovies(query) {
     const data = await response.json();
 
     // Clear existing movie results
-    const movieResults = document.getElementById('movieResults');
+    const movieResults = document.getElementById('card-grid');
     movieResults.innerHTML = '';
 
     // Iterate through the fetched movie results
     data.results.forEach((movie) => {
       // Create movie card
+      const movieCell = document.createElement('div');
+      movieCell.classList.add('cell', 'small-2', 'medium-2', 'large-4'); 
       const movieCard = document.createElement('div');
-      movieCard.classList.add('movie-card');
+      movieCard.classList.add('card');
       movieCard.dataset.movieId = movie.id;
 
       // Create movie title
       const movieTitle = document.createElement('h3');
+      movieTitle.classList.add('card-divider')
       movieTitle.textContent = movie.title;
 
       // Create movie image
       const movieImage = document.createElement('img');
       movieImage.alt = `${movie.title} Poster`;
       if (movie.poster_path) {
-        movieImage.src = `https://image.tmdb.org/t/p/w200/${movie.poster_path}`;
+        movieImage.src = `https://image.tmdb.org/t/p/original/${movie.poster_path}`;
       } else {
         // Provides a placeholder image if no poster_path is available
         movieImage.src = 'https://i.ebayimg.com/images/g/kykAAOSwpDdVGcih/s-l400.jpg'; 
@@ -36,7 +39,7 @@ async function searchMovies(query) {
 
       // Create movie overview
       const movieOverview = document.createElement('p');
-      movieOverview.classList.add('movie-overview');
+      movieOverview.classList.add('card-section');
       movieOverview.textContent = movie.overview;
 
       // Create favorite button
@@ -44,6 +47,8 @@ async function searchMovies(query) {
       favoriteButton.classList.add('favorite-button');
       favoriteButton.dataset.movieId = movie.id;
       favoriteButton.textContent = 'Favorite';
+      const favoriteButtonContainer = document.createElement("div");
+      favoriteButtonContainer.classList.add("button-container");
 
       // Add event listener to the favorite button
       favoriteButton.addEventListener('click', () => {
@@ -54,10 +59,12 @@ async function searchMovies(query) {
       movieCard.appendChild(movieTitle);
       movieCard.appendChild(movieImage);
       movieCard.appendChild(movieOverview);
-      movieCard.appendChild(favoriteButton);
+      favoriteButtonContainer.appendChild(favoriteButton);
+      movieCard.appendChild(favoriteButtonContainer);
 
+      movieCell.appendChild(movieCard);
       // Append movie card to movie results
-      movieResults.appendChild(movieCard);
+      movieResults.appendChild(movieCell);
     });
   } catch (error) {
     console.error('Error fetching movies:', error);
@@ -101,6 +108,9 @@ function updateFavoriteButtons() {
 document.getElementById('searchButton').addEventListener('click', () => {
   const searchInput = document.getElementById('searchInput').value;
   searchMovies(searchInput);
+
+  const movieContainer = document.getElementById('movieContainer');
+  movieContainer.scrollIntoView({ behavior: 'smooth'});
 });
 
 document.addEventListener('DOMContentLoaded', () => {

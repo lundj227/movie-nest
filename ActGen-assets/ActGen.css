@@ -90,6 +90,7 @@ body {
         width: 25px;
         color: white;
     }
+    
 }
 
 section {
@@ -104,6 +105,30 @@ section {
     color:white;
     background: none;
 }
+.card{
+ 
+    background-color: var(--background-color);
+  border: none ;
+  color: var(--hover-color);
+ 
+}
+p {
+  padding-bottom: 2pc;
+}
+.card-divider{
+  justify-content: center;
+  font-weight: 700;
+  color: var(--hover-color);
+  background-color: var(--secondary-color);
+}
+.button{
+  width: 10em;
+  justify-self: center;
+ 
+}
+.button.alert{
+  background-color: var(--secondary-color);
+}
 
 .hero {
     background-position: center;
@@ -111,10 +136,12 @@ section {
     text-align: center;
     color:white;
 }
+.container{
+  margin: 0 auto;
+  display: block;
+  width: 50pc;
+}
 
-/*--------- */
-/*#Footer */
-/*--------- */
 
 footer  {
     background: #111;

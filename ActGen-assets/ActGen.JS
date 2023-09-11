@@ -24,98 +24,100 @@ hamButton.addEventListener("click", toggleNav);
 window.addEventListener("resize", toggleNav);
 
 $(document).ready(function () {
-    function createCard(data) {
-      var cardGrid = $("#card-grid");
-  
-      var cardCell = $("<div>").addClass("container");
-  
-      var card = $("<div>").addClass("card");
-  
-      var cardInfo = $("<div>").addClass("card-container");
-  
-      var cardTitle = $("<p>").addClass("card-divider").text(data.activity);
-  
-      var participants = $("<p>")
-        .addClass("participants")
-        .text("Number of Participants: " + data.participants);
-  
-      var type = $("<p>")
-        .addClass("type")
-        .text("Type of activity: " + data.type);
-  
-      var accessibility = $("<p>")
-        .addClass("accessibility")
-        .text("Accessibility Level: " + data.accessibility);
-  
-      var price = $("<p>")
-        .addClass("price")
-        .text("Price Scale: " + data.price);
-  
-      if (data.link !== "") {
-        var link = $("<p>")
-          .addClass("link")
-          .text("Link: " + data.link);
-        cardInfo.append(link);
-      }
-  
-      var button = $('<button>').addClass('button alert large').text("New Activity");
-      var buttonContainer = $('<div>').addClass('button-container');
-  
-      buttonContainer.append(button);
-      cardInfo.append(type, participants, accessibility, price);
-      card.append(cardTitle);
-      card.append(cardInfo);
-      card.append(buttonContainer);
-      cardCell.append(card);
-      cardGrid.append(cardCell);
-  
-      button.on('click', function () {
-        
-        activity(card);
-      });
-    }
-  
+  // creates card using foundation
+  function createCard(data) {
+    var cardGrid = $("#card-grid");
 
-    function activity(card) {
-      $.ajax({
-        type: "GET",
-        url: "http://www.boredapi.com/api/activity/",
-        imageUrl: "#",
-        dataType: "json",
-      }).then((data) => {
-        console.log(data);
-        updateCard(card, data);
-      });
+    var cardCell = $("<div>").addClass("container");
+
+    var card = $("<div>").addClass("card");
+
+    var cardInfo = $("<div>").addClass("card-container");
+
+    var cardTitle = $("<p>").addClass("card-divider").text(data.activity);
+
+    var participants = $("<p>")
+      .addClass("participants")
+      .text("Number of Participants: " + data.participants);
+
+    var type = $("<p>")
+      .addClass("type")
+      .text("Type of activity: " + data.type);
+
+    var accessibility = $("<p>")
+      .addClass("accessibility")
+      .text("Accessibility Level: " + data.accessibility);
+
+    var price = $("<p>")
+      .addClass("price")
+      .text("Price Scale: " + data.price);
+    // checks to see if link is present
+    if (data.link !== "") {
+      var link = $("<p>")
+        .addClass("link")
+        .text("Link: " + data.link);
+      cardInfo.append(link);
     }
-  
-    function updateCard(card, data) {
-      card.find(".card-divider").text(data.activity);
-      card.find(".participants").text("Number of Participants: " + data.participants);
-      card.find(".type").text("Type of activity: " + data.type);
-      card.find(".accessibility").text("Accessibility Level: " + data.accessibility);
-      card.find(".price").text("Price Scale: " + data.price);
-  
-      var link = card.find(".link");
-      if (data.link !== "") {
-        if (link.length === 0) {
-          link = $("<p>")
-            .addClass("link");
-          card.find(".card-container").append(link);
-        }
-        link.text("Link: " + data.link);
-      } else {
-        link.remove();
-      }
-    }
-  
+
+    var button = $("<button>")
+      .addClass("button alert large")
+      .text("New Activity");
+    var buttonContainer = $("<div>").addClass("button-container");
+// appending all the created elements on to the html page
+    buttonContainer.append(button);
+    cardInfo.append(type, participants, accessibility, price);
+    card.append(cardTitle);
+    card.append(cardInfo);
+    card.append(buttonContainer);
+    cardCell.append(card);
+    cardGrid.append(cardCell);
+
+    button.on("click", function () {
+      activity(card);
+    });
+  }
+// pulling info from api
+  function activity(card) {
     $.ajax({
       type: "GET",
       url: "http://www.boredapi.com/api/activity/",
       imageUrl: "#",
       dataType: "json",
     }).then((data) => {
-
-      createCard(data);
+      console.log(data);
+      updateCard(card, data);
     });
+  }
+// updates card when new activity button is pressed
+  function updateCard(card, data) {
+    card.find(".card-divider").text(data.activity);
+    card
+      .find(".participants")
+      .text("Number of Participants: " + data.participants);
+    card.find(".type").text("Type of activity: " + data.type);
+    card
+      .find(".accessibility")
+      .text("Accessibility Level: " + data.accessibility);
+    card.find(".price").text("Price Scale: " + data.price);
+
+    var link = card.find(".link");
+    if (data.link !== "") {
+      if (link.length === 0) {
+        link = $("<p>").addClass("link");
+        card.find(".card-container").append(link);
+      }
+      link.text("Link: " + data.link);
+    } else {
+      link.remove();
+    }
+  }
+
+  $.ajax({
+    type: "GET",
+    url: "http://www.boredapi.com/api/activity/",
+    imageUrl: "#",
+    dataType: "json",
+  }).then((data) => {
+    createCard(data);
   });
-  
+});
