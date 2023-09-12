@@ -55,6 +55,6 @@ The Movie Search App is a user-friendly web application that allows movie enthus
 * [TMDb API](https://developer.themoviedb.org/reference/intro/getting-started): Movie Database
 
 ## The Application
-[Click Here to View the Live Page!](https://lundj227.github.io/group-project-1)
+[Click Here to View the Live Page!](https://lundj227.github.io/movie-nest)
 ![alt text](./assets/images/homepage-ss.png)
 
